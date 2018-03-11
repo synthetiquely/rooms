@@ -10,12 +10,8 @@ type User {
 
 input UserInput {
     login: String!
+    avatarUrl: String!
     homeFloor: Int
-}
-
-type UserRoom {
-    id: ID!
-    title: String!
 }
 
 type Room {
@@ -71,8 +67,6 @@ type Mutation {
   changeEventRoom(id: ID!, roomId: ID!): Event
   removeEvent(id: ID!): Event
 }
-
-union SearchResult = User | Event | Room
 
 schema {
   query: Query

@@ -1,22 +1,22 @@
 const { models } = require('../../models');
 
 module.exports = {
-event (root, { id }) {
+  event(root, { id }) {
     return models.Event.findById(id);
   },
-  events (root, args, context) {
-    return models.Event.findAll(argumets, context);
+  events() {
+    return models.Event.all();
   },
-user (root, { id }) {
+  user(root, { id }) {
     return models.User.findById(id);
   },
-  users (root, args, context) {
-    return models.User.findAll({}, context);
+  users() {
+    return models.User.findAll();
   },
-room (root, { id }) {
+  room(root, { id }) {
     return models.Room.findById(id);
   },
-  rooms (root, args, context) {
-    return models.Room.findAll({ offset: 1 }, context);
-  }
+  rooms() {
+    return models.Room.findAll();
+  },
 };
