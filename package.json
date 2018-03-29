@@ -3,23 +3,48 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "author": "",
+  "author": "Anatoly Belobrovik",
   "license": "MIT",
   "scripts": {
+    "start": "npm run server --env.NODE_ENV=development",
     "test": "echo \"Error: no test specified\" && exit 1",
     "reset-db": "rm -f ./db.sqlite3 && node create-mock-data.js",
-    "dev": "nodemon index.js"
+    "client": "webpack --mode development",
+    "server": "nodemon --watch index.js"
   },
   "dependencies": {
+    "body-parser": "^1.18.2",
     "express": "^4.15.4",
     "express-graphql": "^0.6.11",
     "graphql": "^0.11.1",
     "graphql-date": "^1.0.3",
     "graphql-tools": "^1.2.1",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
     "sequelize": "^4.7.5",
-    "sqlite3": "^3.1.9"
+    "sqlite3": "^3.1.9",
+    "webpack": "^4.4.1",
+    "webpack-dev-middleware": "^3.1.0",
+    "webpack-hot-middleware": "^2.21.2"
   },
   "devDependencies": {
-    "nodemon": "^1.12.5"
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^8.2.2",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "concurrently": "^3.5.1",
+    "css-loader": "^0.28.11",
+    "eslint": "^4.9.0",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-jsx-a11y": "^6.0.2",
+    "eslint-plugin-react": "^7.4.0",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.1.0",
+    "mini-css-extract-plugin": "^0.3.0",
+    "nodemon": "^1.12.5",
+    "prettier": "^1.11.1",
+    "webpack-cli": "^2.0.13"
   }
 }
