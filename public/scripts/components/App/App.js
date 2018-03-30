@@ -7,14 +7,12 @@ import React from 'react';
 // import { Tag } from '../Tag/Tag';
 // import { Avatar } from '../Avatar/Avatar';
 // import { Icon } from '../Icon/Icon';
-import { Title } from '../Typography/Title';
-import { Subtitle } from '../Typography/Subtitle';
+// import { Title } from '../Typography/Title';
+// import { Subtitle } from '../Typography/Subtitle';
+import { Modal } from '../Modal/Modal';
 
 export const App = () => (
   <div>
-    <Title>Прачечная</Title>
-    <Subtitle>до 10 человек</Subtitle>
-    <Title disabled>Оранжевый Апельсин</Title>
-    <Subtitle disabled>до 10 человек</Subtitle>
+    <Modal>Иконка Встреча создана! 14 декабря, 15:00-17:00 Готем, 4 этаж</Modal>
   </div>
 );
