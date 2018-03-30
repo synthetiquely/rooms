@@ -1,13 +1,20 @@
+const path = require('path');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
-  entry: './public/scripts/index.js',
+  entry: path.resolve(__dirname, 'public/scripts/index.js'),
   output: {
-    path: '/public/build/',
+    path: path.resolve(__dirname, 'public/build'),
     filename: 'bundle.js',
   },
-  mode: 'development',
+  devServer: {
+    port: 3000,
+    proxy: {
+      '/api': 'http:localhost:8080',
+    },
+    historyApiFallback: true,
+  },
   module: {
     rules: [
       {
@@ -19,6 +26,7 @@ module.exports = {
       },
       {
         test: /\.html$/,
+        exclude: '/node_modules',
         use: [
           {
             loader: 'html-loader',
@@ -28,6 +36,7 @@ module.exports = {
       },
       {
         test: /\.css$/,
+        exclude: '/node_modules',
         use: [MiniCssExtractPlugin.loader, 'css-loader'],
       },
     ],
@@ -35,7 +44,8 @@ module.exports = {
   plugins: [
     new HtmlWebPackPlugin({
       template: './public/index.html',
-      filename: './index.html',
+      filename: 'index.html',
+      favicon: 'public/favicon.ico',
     }),
     new MiniCssExtractPlugin({
       filename: '[name].css',
