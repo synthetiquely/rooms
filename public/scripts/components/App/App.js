@@ -10,5 +10,6 @@ import React from 'react';
 // import { Title } from '../Typography/Title';
 // import { Subtitle } from '../Typography/Subtitle';
 // import { Modal } from '../Modal/Modal';
+// import { Popup } from '../Popup/Popup';
 
 export const App = () => <div />;
