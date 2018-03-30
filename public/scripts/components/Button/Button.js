@@ -7,6 +7,7 @@ export const Button = glamorous.button(
     outline: 'none',
     border: 'none',
     borderRadius: '4px',
+    cursor: 'pointer',
   },
   ({ type, disabled }) => {
     let styles = {};
@@ -16,10 +17,10 @@ export const Button = glamorous.button(
         color: '#000',
         backgroundColor: '#E9ECEF',
         ':hover': {
-          backgroundColor: '#E9ECEF',
+          backgroundColor: '#DDE0E3',
         },
         ':active, :focus': {
-          backgroundColor: '#E9ECEF',
+          backgroundColor: '#C7CDD3',
         },
       };
     }

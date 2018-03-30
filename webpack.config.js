@@ -39,6 +39,18 @@ module.exports = {
         exclude: '/node_modules',
         use: [MiniCssExtractPlugin.loader, 'css-loader'],
       },
+      {
+        test: /\.svg$/,
+        exclude: '/node_modules',
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              limit: 8192,
+            },
+          },
+        ],
+      },
     ],
   },
   plugins: [

@@ -9,6 +9,7 @@ export const Slot = glamorous.button(
     border: 'none',
     outline: 'none',
     backgroundColor: '#fff',
+    cursor: 'pointer',
     ':hover': {
       borderRadius: '2px',
       backgroundColor: '#1D54FE',
