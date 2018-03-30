@@ -42,6 +42,10 @@ export const Button = glamorous.button(
       styles = {
         color: 'rgba(0,0,0,0.2)',
         backgroundColor: ' #E2E5E8',
+        ':hover, :active, :focus': {
+          color: 'rgba(0,0,0,0.2)',
+          backgroundColor: ' #E2E5E8',
+        },
       };
     }
 
