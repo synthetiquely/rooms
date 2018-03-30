@@ -2,6 +2,7 @@ import glamorous from 'glamorous';
 
 export const Button = glamorous.button(
   {
+    maxHeight: '36px',
     padding: '10px 15px',
     fontSize: '0.9rem',
     outline: 'none',
@@ -9,9 +10,9 @@ export const Button = glamorous.button(
     borderRadius: '4px',
     cursor: 'pointer',
   },
-  ({ type, disabled }) => {
+  ({ primary, disabled }) => {
     let styles = {};
-    if (!type || type === 'default') {
+    if (!primary) {
       styles = {
         ...styles,
         color: '#000',
@@ -25,7 +26,7 @@ export const Button = glamorous.button(
       };
     }
 
-    if (type === 'primary') {
+    if (primary) {
       styles = {
         color: '#fff',
         backgroundColor: '#007DFF',

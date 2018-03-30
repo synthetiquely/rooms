@@ -1,5 +1,30 @@
+html,
+body,
+#app {
+  height: 100%;
+}
+
 body {
   margin: 0;
   font-family: 'Lato', sans-serif;
   font-size: 18px;
+}
+
+.logo {
+  width: 48px;
+  height: 48px;
+  object-fit: cover;
+}
+
+.logo:hover {
+  animation: spin 1.5s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
