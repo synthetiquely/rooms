@@ -7,6 +7,7 @@ module.exports = {
   },
   rules: {
     'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx'] }],
-    'class-methods-use-this': [0],
+    'import/prefer-default-export': 0,
+    'class-methods-use-this': 0,
   },
 };

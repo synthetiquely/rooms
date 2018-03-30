@@ -18,6 +18,8 @@
     "dotenv": "^5.0.1",
     "express": "^4.15.4",
     "express-graphql": "^0.6.11",
+    "glamor": "^2.20.40",
+    "glamorous": "^4.12.1",
     "graphql": "^0.11.1",
     "graphql-date": "^1.0.3",
     "graphql-tools": "^1.2.1",
