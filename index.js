@@ -1,9 +1,12 @@
 const path = require('path');
+const dotenv = require('dotenv');
 const express = require('express');
 const bodyParser = require('body-parser');
 const graphqlRoutes = require('./graphql/routes');
 
 const app = express();
+
+dotenv.config();
 
 app.use(bodyParser.json());
 
