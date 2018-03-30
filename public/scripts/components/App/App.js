@@ -9,10 +9,6 @@ import React from 'react';
 // import { Icon } from '../Icon/Icon';
 // import { Title } from '../Typography/Title';
 // import { Subtitle } from '../Typography/Subtitle';
-import { Modal } from '../Modal/Modal';
+// import { Modal } from '../Modal/Modal';
 
-export const App = () => (
-  <div>
-    <Modal>Иконка Встреча создана! 14 декабря, 15:00-17:00 Готем, 4 этаж</Modal>
-  </div>
-);
+export const App = () => <div />;
