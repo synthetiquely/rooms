@@ -2,8 +2,9 @@ import glamorous from 'glamorous';
 
 export const Slot = glamorous.button(
   {
-    width: '57px',
+    width: 'calc(100% / 16)',
     height: '28px',
+    padding: '0',
     color: '#fff',
     fontSize: '1.5rem',
     border: 'none',
@@ -19,10 +20,11 @@ export const Slot = glamorous.button(
       backgroundColor: '#1D00FE',
     },
   },
-  ({ occupied }) => {
+  ({ occupied, hours }) => {
     let styles = {};
     if (occupied) {
       styles = {
+        ...styles,
         backgroundColor: '#D5DFE9',
         color: '#D5DFE9',
         ':hover, :active, :focus': {
@@ -30,6 +32,13 @@ export const Slot = glamorous.button(
           backgroundColor: '#98A9B9',
           color: '#98A9B9',
         },
+      };
+    }
+
+    if (hours) {
+      styles = {
+        ...styles,
+        width: `calc(100% / 16 * ${hours})`,
       };
     }
     return styles;

@@ -1,6 +1,7 @@
 import glamorous from 'glamorous';
 
 export const Header = glamorous.section({
+  zIndex: '11',
   position: 'sticky',
   top: '0',
   left: '0',
